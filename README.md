@@ -1,5 +1,4 @@
-# acyp
-# 04. Consigna abierta
+# Consignas
 - Consigna 1
 Basado en los párrafos anteriores, se debe analizar el comportamiento de los algoritmos
 presentados a continuación (denominados Algoritmo 1 y Algoritmo 2), estudiando sus
