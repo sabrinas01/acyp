@@ -12,3 +12,4 @@ programa en el que se ejecuten 15 hilos, de manera que el hilo i-ésimo se pause
 tiempo aleatorio (definir un rango en milisegundos que pueda ser perceptible), y que por
 pantalla se muestre el mensaje correspondiente (“Soy el hilo 1”, “Soy el hilo 2”, ... ,“Soy el
 hilo n”) un número aleatorio de veces.
+# [PDF CON RESOLUCIÓN DEL TP](https://soysiglo-my.sharepoint.com/:b:/g/personal/sabrsanso_soysiglo_21_edu_ar/IQDgv-Mumzh9RIjeBWLCFUzzARA4K6FlE98_pn_Zp2fNZhI?e=UoOpfk)

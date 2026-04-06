@@ -13,6 +13,7 @@ void misaludo(string m, int demora, int veces)
            this_thread:: sleep_for(chrono::milliseconds(demora)); //este hilo se detiene durante (demora) milisegundos
            
        }
+}
    
 int main()
 {

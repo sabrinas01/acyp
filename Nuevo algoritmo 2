@@ -1,0 +1,38 @@
+#include <iostream>
+#include <thread>
+#include <vector>
+#include <chrono>
+#include <cstdlib>
+#include <ctime>
+
+void tareaHilo(int id)     // Cada hilo ejecuta esta función de manera concurrente
+{
+    int repeticiones = rand() % 4 + 1;   // entre 1 y 4 veces
+    int pausa = rand() % 500 + 100;      // entre 100 y 600 ms
+
+    for (int i = 0; i < repeticiones; i++) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(pausa)); //este hilo se detiene durante (pausa) milisegundos
+        std::cout << "Soy el hilo " << id << std::endl;
+    }
+}
+
+int main() 
+{
+    srand(time(NULL));   // semilla aleatoria que es el punto de partida
+    
+    int n = 15; // tamaño del vector 
+    std::vector<std::thread> hilos(n); //estructura que guarda elementos del tipo hilo
+
+    // Crear los hilos
+    for (int i = 0; i < n; i++) {
+        hilos[i] = std::thread(tareaHilo, i + 1);    // Hilo principal del programa
+    }
+
+    // Esperar a que finalicen
+    for (int i = 0; i < n; i++) 
+    {
+        hilos[i].join(); // el hilo principal espera a que termine cada hilo
+    }
+
+    return 0;
+}
